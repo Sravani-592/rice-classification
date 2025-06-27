@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container content-section">
+    <div class="text-center mb-5">
+        <h2 class="section-title">Classify Your Rice Image</h2>
+        <p class="lead">Upload an image of rice, and our AI will identify its type.</p>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card p-4 text-center shadow-lg prediction-card">
+                <!-- Image Upload Form -->
+                <form id="prediction-form">
+                    <div class="mb-3">
+                        <label for="imageUpload" class="form-label">Choose an image file (.jpg, .png)</label>
+                        <input class="form-control" type="file" id="imageUpload" name="file" accept="image/png, image/jpeg, image/jpg" required>
+                    </div>
+                </form>
+                
+                <!-- Buttons -->
+                <div class="mt-3">
+                    <button id="btn-preview" class="btn btn-secondary"><i class="fas fa-eye"></i> Preview Image</button>
+                    <button id="btn-predict" class="btn btn-success"><i class="fas fa-brain"></i> Predict</button>
+                </div>
+                
+                <!-- Image Preview Area -->
+                <div id="image-preview-container" class="mt-4" style="display: none;">
+                    <h5>Image Preview:</h5>
+                    <img id="image-preview" src="#" alt="Image Preview" class="img-fluid rounded"/>
+                </div>
+                
+                <!-- Prediction Result Area -->
+                <div id="result-container" class="mt-4" style="display: none;">
+                    <div class="spinner-border text-success" role="status" id="loading-spinner" style="display: none;">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <div id="result-text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+{% endblock %}
