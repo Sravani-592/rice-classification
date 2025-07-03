@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="hero-section text-center text-white d-flex align-items-center justify-content-center">
+    <div class="container">
+        <h1 class="display-3 fw-bold">Welcome to the Rice Classifier</h1>
+        <p class="lead col-lg-8 mx-auto">
+            Instantly identify different types of rice from an image. Our advanced AI model provides fast and accurate classifications.
+        </p>
+        <a href="{{ url_for('predict_page') }}" class="btn btn-lg btn-success mt-4">
+            <i class="fas fa-play-circle"></i> Start Predicting Now
+        </a>
+    </div>
+</div>
+{% endblock %}

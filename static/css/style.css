@@ -1,0 +1,196 @@
+/* static/css/style.css */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* REPLACE your old body and @keyframes rules with this */
+
+/* REPLACE your old body and @keyframes rules with this */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding-top: 70px; /* For the fixed navbar */
+    position: relative; /* Needed for the ::before overlay */
+}
+
+/* REPLACE your old body and @keyframes rules with this */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    padding-top: 70px; /* For the fixed navbar */
+    
+    /* --- New Geometric SVG Background --- */
+    background-color: #f8f9fa; /* A very light gray fallback */
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ced4da' fill-opacity='0.4'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Make content sections pop a little more on this background */
+.content-section, .content-section-predict {
+    background-color: #ffffff; /* Pure white */
+    border-radius: 8px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 60px 40px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.bg-light-transparent {
+    background-color: transparent;
+    box-shadow: none;
+    border-radius: 0;
+}
+/* --- The rest of your CSS file... --- */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+}
+.navbar .navbar-brand, .navbar .nav-link {
+    color: #fff;
+    transition: color 0.3s;
+}
+.navbar .nav-link:hover, .navbar .nav-link.active {
+    color: #20c997;
+}
+.btn-predict-nav {
+    border-radius: 20px;
+    padding: 5px 20px;
+}
+
+/* --- Hero Section (Home Page) --- */
+.hero-section {
+    min-height: 100vh; /* Full viewport height */
+    background: url('../images/background.jpg') no-repeat center center/cover;
+    position: relative;
+    color: white;
+}
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+.hero-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* --- Content Sections on Main Page --- */
+.content-section {
+    padding: 80px 0;
+    border-bottom: 1px solid #ddd;
+}
+.content-section:last-of-type {
+    border-bottom: none;
+}
+.bg-light-transparent {
+    background-color: rgba(248, 249, 250, 0.8);
+}
+.section-title {
+    font-weight: 700;
+    color: #23a6d5;
+}
+
+/* --- Predict Page Content Section --- */
+.content-section-predict {
+    padding: 80px 15px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    margin: 40px auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 1140px;
+}
+
+
+/* --- Card Styling --- */
+.card {
+    border: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.testimonial-card {
+    background-color: #ffffff;
+}
+.prediction-card {
+    background-color: #fff;
+}
+
+#image-preview {
+    max-height: 300px;
+    width: auto;
+    border: 3px solid #ddd;
+    padding: 5px;
+}
+#result-text { font-size: 1.5rem; font-weight: bold; }
+#result-text .prediction { color: #20c997; }
+#result-text .confidence { color: #6c757d; font-size: 1rem; display: block; }
+#result-text.error { color: #dc3545; font-size: 1.2rem; }
+
+/* --- Footer --- */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    margin-top: auto;
+}
+/* Custom borders for rice variety cards */
+.card-basmati {
+    border: 2px solid #20c997; /* Teal */
+}
+.card-jasmine {
+    border: 2px solid #23a6d5; /* Sky Blue */
+}
+.card-ipsala {
+    border: 2px solid #ffc107; /* Amber */
+}
+.card-karacadag {
+    border: 2px solid #6f42c1; /* Purple */
+}
+.card-arborio {
+    border: 2px solid #fd7e14; /* Orange */
+}
+
+/* Optional badge color tweaks */
+.bg-purple {
+    background-color: #6f42c1 !important;
+}
+.bg-orange {
+    background-color: #fd7e14 !important;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+/* Card hover effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.testimonial-card {
+    border: 1px solid #dee2e6; /* Light grey border */
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+.testimonial-card i {
+    color: #198754; /* Bootstrap 'success' green */
+}
+.blockquote-footer {
+    background-color: #dee2e6; /* Medium-light grey */
+    padding: 8px 12px;
+    border-radius: 5px;
+    display: inline-block;
+    color: #343a40; /* Darker text for contrast */
+    font-style: normal;
+}
+.blockquote-footer:hover {
+    background-color: #ced4da; /* Slightly darker on hover */
+}, in home page the background color is grey, insted of that use light green 
+

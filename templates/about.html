@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container content-section">
+    <div class="text-center mb-5">
+        <h2 class="section-title">About Our Project</h2>
+        <p class="lead">Understanding the world of rice, one grain at a time.</p>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 mb-4">
+            <h3>Project Aim</h3>
+            <p>Our goal is to leverage the power of deep learning to create an accessible, user-friendly tool for identifying various rice varieties. This project aids farmers, researchers, and consumers in distinguishing types like Arborio, Basmati, and Jasmine with high accuracy, simply by uploading a picture.</p>
+        </div>
+        <div class="col-md-6 mb-4">
+            <h3>Technology Used</h3>
+            <p>This application is built with a Python Flask backend to serve a powerful TensorFlow/Keras model. The frontend is crafted with HTML, CSS, and JavaScript, enhanced with the Bootstrap framework for a responsive and modern user interface.</p>
+        </div>
+    </div>
+
+    <hr class="my-5">
+
+    <h3 class="text-center mb-4">Discover Rice Varieties</h3>
+    <div class="row">
+
+        <!-- Basmati -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 shadow-sm rice-card card-basmati">
+                <img src="https://via.placeholder.com/400x300.png?text=Basmati" class="card-img-top" alt="Basmati Rice">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Basmati <span class="badge bg-success">Popular</span>
+                    </h5>
+                    <p class="card-text">A long, slender-grained aromatic rice traditionally from the Indian subcontinent.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jasmine -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 shadow-sm rice-card card-jasmine">
+                <img src="https://via.placeholder.com/400x300.png?text=Jasmine" class="card-img-top" alt="Jasmine Rice">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Jasmine <span class="badge bg-primary">Fragrant</span>
+                    </h5>
+                    <p class="card-text">A long-grain variety of fragrant rice with a slightly sticky texture when cooked.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ipsala -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 shadow-sm rice-card card-ipsala">
+                <img src="https://via.placeholder.com/400x300.png?text=Ipsala" class="card-img-top" alt="Ipsala Rice">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Ipsala <span class="badge bg-warning text-dark">Soft Texture</span>
+                    </h5>
+                    <p class="card-text">A Turkish-grown rice variety known for its soft texture and consistent grain quality.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Karacadag -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 shadow-sm rice-card card-karacadag">
+                <img src="https://via.placeholder.com/400x300.png?text=Karacadag" class="card-img-top" alt="Karacadag Rice">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Karacadag <span class="badge bg-purple text-white">Ancient Grain</span>
+                    </h5>
+                    <p class="card-text">An ancient variety of rice cultivated in Turkey, known for its resilience and aroma.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Arborio -->
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card h-100 shadow-sm rice-card card-arborio">
+                <img src="https://via.placeholder.com/400x300.png?text=Arborio" class="card-img-top" alt="Arborio Rice">
+                <div class="card-body">
+                    <h5 class="card-title">
+                        Arborio <span class="badge bg-orange text-white">Risotto Rice</span>
+                    </h5>
+                    <p class="card-text">An Italian short-grain rice, known for its high starch content, perfect for risotto.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
